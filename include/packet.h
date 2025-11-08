@@ -11,5 +11,5 @@ typedef struct frame
     uint8_t data[512];
     uint8_t crc;
 
-};
+} frame_t;
 #pragma pack(pop)
