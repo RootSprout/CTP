@@ -11,6 +11,20 @@ void send_frame(int fd, frame_t *f){
     }
 }
 
+int receive_frame(int fd, frame_t *f){
+    uint8_t byte;
 
+    while(read(fd, &byte, 1) == 1){ //read preamble
+        if(byte == 0xAA){
+            f->preamble = byte;
+            read(fd, (uint8_t*)f+1, sizeof(*f)-1);
+            printf("File Read Successfully");
+            return 1;
+        }
+    }
+
+    printf("Error Reading file");
+    return 0;
+}
 
 
