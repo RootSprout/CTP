@@ -2,8 +2,8 @@
 #include<fcntl.h>
 
 
-void setup_termios(){
-    int fd = open("dev", O_RDWR | O_NOCTTY);
+int setup_termios(char* port_name){
+    int fd = open(port_name, O_RDWR | O_NOCTTY);
 
     struct termios tty;
 
@@ -22,5 +22,7 @@ void setup_termios(){
     tty.c_lflag = 0;
 
     tcsetattr(fd, TCSANOW, &tty);
+
+    return fd;
 
 }
