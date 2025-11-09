@@ -1,8 +1,8 @@
 CC = gcc
-SRC_COMMON = src/ack.c \
-src/comm.c \
-src/crc.c \
-src/termios.c 
+SRC_COMMON = src/src/ack.c \
+src/src/comm.c \
+src/src/crc.c \
+src/src/termios.c 
 
 
 SRC_SENDER = src/datalink/dsender.c main_dsender.c
