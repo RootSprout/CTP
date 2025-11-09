@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<unistd.h>
-#include "../../include/packet.h"
-#include "../../include/comm.h"
+#include "../include/packet.h"
+#include "../include/comm.h"
 
 void send_frame(int fd, frame_t *f){
     ssize_t bytes_written = write(fd, f, sizeof(*f));

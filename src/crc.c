@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<string.h>
-#include "../../include/crc.h"
+#include "../include/crc.h"
 
 void xor(char* temp, char* divisor, int len_divisor, int start){
     for(int i =0; i<len_divisor; i++){

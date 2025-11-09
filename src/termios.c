@@ -1,6 +1,6 @@
 #include <termios.h>
 #include<fcntl.h>
-#include "../../include/termios.h"
+#include "../include/termios.h"
 
 
 int setup_termios(char* port_name){
