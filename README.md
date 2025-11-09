@@ -35,6 +35,7 @@
 
 ```bash
 cd ctp
+socat -d -d pty,raw,echo=0,link=/tmp/sender pty,raw,echo=0,link=/tmp/receiver
 make
 make run-receiver
 make run-sender
