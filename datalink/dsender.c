@@ -38,10 +38,10 @@ int dsender(){
     send_frame(fd, &f);
 
         // wait for ACK
-    // if (!wait_for_ack(fd, seq_no)) {
-    //         printf("Resending frame %d\n", seq_no);
-    //         send_frame(fd, &f);
-    // }
+    if (!wait_for_ack(fd, seq_no)) {
+            printf("Resending frame %d\n", seq_no);
+            send_frame(fd, &f);
+    }
 
     seq_no++;
 
