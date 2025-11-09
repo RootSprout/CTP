@@ -1,12 +1,13 @@
 CC = gcc
-SRC = main.c \
+SRC = datalink/sender.c \
+datalink/receiver.c \
 src/ack.c \
 src/comm.c \
 src/crc.c \
 src/termios.c 
 
 
-OUT = ctp
+OUT = sender
 
 $(OUT):$(SRC)
 	$(CC) $(SRC) -o $(OUT) 
