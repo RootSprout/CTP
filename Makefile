@@ -5,8 +5,8 @@ src/crc.c \
 src/termios.c 
 
 
-SRC_SENDER = datalink/dsender.c main_dsender.c
-SRC_RECEIVER = datalink/dreceiver.c main_dreceiver.c
+SRC_SENDER = src/datalink/dsender.c main_dsender.c
+SRC_RECEIVER = src/datalink/dreceiver.c main_dreceiver.c
 
 
 SENDER_OUT = sender
