@@ -2,6 +2,8 @@
 #include<stdint.h>
 #include "../include/packet.h"
 #include "../include/ack.h"
+#include "../include/comm.h"
+#include<string.h>
 
 void send_ack(int fd, uint16_t seq_no, int success){
     frame_t ack;
