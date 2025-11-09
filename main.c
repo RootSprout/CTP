@@ -6,7 +6,7 @@
 #include "include/termios.h"
 #include "include/ack.h"
 #include <string.h>
-
+#include <stdlib.h> 
 
 int main(){
     int fd = setup_termios("dev/tty");
@@ -31,7 +31,7 @@ int main(){
     strcpy(transmitted, bit_string);
     strcat(transmitted, remainder);
 
-    f.crc = (uint8_t)strol(remainder, NULL, 2);
+    f.crc = (uint8_t)strtol(remainder, NULL, 2);
     strcpy((char*)f.data, message);
 
     send_frame(fd, &f);
