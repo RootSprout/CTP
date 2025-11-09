@@ -12,6 +12,8 @@ void send_ack(int fd, uint16_t seq_no, int success){
     ack.ack_no = seq_no;
     memset(ack.data, 0, sizeof(ack.data));
     ack.crc = success ? 1: 0;
+
+    send_frame(fd, &ack);
 }
 
 int wait_for_ack(int fd, uint16_t expected_seq) {
