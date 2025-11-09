@@ -38,9 +38,12 @@ int dsender(){
     send_frame(fd, &f);
 
         // wait for ACK
+    printf("Checking for ACK\n");
     if (!wait_for_ack(fd, seq_no)) {
-            printf("Resending frame %d\n", seq_no);
+            printf("Sender: Resending frame %d\n", seq_no);
             send_frame(fd, &f);
+    }else{
+        printf("Sender: Received ACK from Receiver\n");
     }
 
     seq_no++;
