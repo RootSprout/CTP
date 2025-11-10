@@ -46,7 +46,7 @@ make run-sender
 ![Alt Text](arch.png)
 
 
-## Readmore here: [CTP Blog](https://medium.com/@meerthika/building-a-shell-in-c-understanding-fork-pipes-and-file-descriptors-fc030ca7549d)
+## Readmore here: [CTP Blog](https://meerthika.medium.com/building-a-frame-based-custom-transport-protocol-in-c-2c9fbd404428)
 
 ## 🤝 Contributing
 
