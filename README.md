@@ -19,6 +19,8 @@
 | Termios Integration           | Configures serial ports, baud rate, character size, and blocking mode |
 | Simple Data Transfer          | Send arbitrary payloads reliably over serial   |
 
+
+Serial ports - A: 3000 B: 5000
 ---
 
 ## 🚀 Getting Started
